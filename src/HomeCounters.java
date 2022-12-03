@@ -9,17 +9,12 @@ public class HomeCounters {
         int countHotWater = 10;
         int countElectricity = 250;
 
-        double countWater = (countCouldWater * couldWater) + (countHotWater * hotWater) + ((countCouldWater + countHotWater) * waterDisposal );
+        double countWater = (countCouldWater * couldWater) + (countHotWater * hotWater) + ((countCouldWater + countHotWater) * waterDisposal);
         double countPower = electricity * countElectricity;
-        double totalPrice = countWater + countPower;
-        double tp = totalPrice;
-        tp = Math.round(tp * 100);
-        tp = tp/100;
+        double totalPrice = Math.round((countWater + countPower)* 100);
+        totalPrice = totalPrice/100;
 
         System.out.println("Ваши расходы по счетчикам " + totalPrice);
-        System.out.println("Ваши расходы по счетчикам " + tp);
-
-
 
     }
 }
